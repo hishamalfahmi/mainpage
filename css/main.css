@@ -1,0 +1,187 @@
+:root{
+    --primary:#000;
+    --secondary:#1b1b1b;
+    --third:#474747;
+}
+
+*{
+    transition: .3s ease-in-out;
+}
+
+body{
+    background-color: #000;
+    font-family: 'Space Mono', monospace;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width:400px) {
+    main{
+        width: 100vw;
+        height: 100vh;
+    }
+}
+
+/* ## IMAGE AND CLOCK ## */
+
+main .imgClock{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 400px; 
+    /* background-image: "../mainphoto.jpg";
+    background-size: cover; */
+    object-fit: cover;
+    border: 1px var(--secondary) solid;
+    overflow: hidden;
+    max-width: 95%;
+    
+
+}
+
+main .imgClock img{
+    width: 100%;
+}
+
+main .current-time{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    font-size: .9rem;
+    font-weight: normal;
+    color: var(--third);
+}
+
+/* ## QUICK AND SEARCH CONTAINER ## */
+
+main .quickAndSearch{
+    /* background-color: rgba(255, 0, 0, 0.204); */
+    width: 400px; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    max-width: 95%;
+   
+    
+}
+
+/* ## SEARCH ## */
+main .search-section #searchbar{
+    background-color: var(--primary);
+    color: var(--third);
+    font-size: .7rem;
+    text-transform: capitalize;
+    border: 1px solid var(--secondary);
+    margin-top: 1rem;
+    padding:.5rem;
+    border-radius: .4rem;
+    width: 15rem;
+    
+}
+
+@media screen and (min-width:400px) {
+    main .search-section #searchbar{
+        max-width: 95%;
+    }
+}
+
+main .search-section #searchbar:focus{
+    scale: 0.95;
+}
+main .search-section #searchbar::selection{
+   background-color: var(--secondary);
+   color: var(--primary);
+}
+
+/* ## QUICK ## */
+
+main .quick{
+    display: flex;
+    justify-content: space-between;
+    width: 10rem;
+    max-width: 95%;
+    text-align: center;
+    margin-top: 1rem ;
+    margin-bottom: 1rem;
+    padding: .2rem .5rem;
+    /* background-color: red; */
+    border: solid 1px var(--secondary);
+    border-radius: .4rem;
+
+}
+
+main .quick a{
+    color: var(--third);
+    /* margin: 0 .2rem; */
+    font-size: 1.1rem;
+}
+
+main .quick a:hover{
+    color: rgb(163, 163, 163);
+}
+
+/* ## BOOKMARKS ## */
+main .bookmarks{
+    display: flex;
+    justify-content: space-between;
+    max-width: 95%;
+    width: 400px; 
+    font-size: .8rem;
+    margin-top: 1rem;
+    /* background-color: red; */
+}
+
+/* 
+@media screen and (max-width: 400px) {
+    main .bookmarks{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    main .bookmarks ul:last-of-type{
+        grid-column: span 2;
+    }
+} */
+
+main .bookmarks ul{
+    /* background-color: red; */
+    
+    font-style: italic;
+    text-align: center;
+    /* text-transform: capitalize; */
+    color: var(--secondary);
+}
+
+main .bookmarks ul li{
+    font-size: .6rem;
+    width: fit-content;
+    margin: .5rem auto ;
+}
+
+main .bookmarks ul li a{
+    font-style: normal;
+    color: var(--third);
+    transition: .2s ease-in-out;
+    
+}
+
+main .bookmarks ul li a:hover{
+    color: rgb(163, 163, 163);
+    scale: 1.3;
+}
+
+main .bookmarks ul li:hover{
+    scale: 1.05;
+}

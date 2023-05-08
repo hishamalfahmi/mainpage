@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/resetcss.css">
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/db3fb4b287.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    <main>
+        <div class="imgClock">
+            <img src="maingif2.gif" alt="">
+            <h2 id="current-time" class="current-time"> hello pixelated </h2>
+        </div>
+
+        <div class="quickAndSearch">
+            <div class="search-section">
+                <input type="text" id="searchbar" placeholder="search"></input>
+                <!-- <button id="button" onclick="search()"> </button> -->
+            </div>
+    
+            <div class="quick">
+                <a href="https://www.youtube.com/">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://twitter.com/home">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.gmail.com/">
+                    <i class="fa-brands fa-google"></i>
+                </a>
+                
+            </div>
+    
+        </div>
+
+
+        <div class="bookmarks">
+            <!-- <ul>
+                quick
+                <li>
+                    <a href="https://www.youtube.com/">youtube</a>
+                </li>
+                <li>
+                    <a href="https://www.gmail.com/">gmail</a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/home">twitter</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/">instagram</a>
+                </li>
+            </ul> -->
+
+            <ul>
+                # resources
+                <li>
+                    <a href="https://www.github.com/">github</a>
+                </li>
+            </ul>
+
+            <ul>
+                # other
+                <li>
+                    <a href="https://drive.google.com/drive/u/1/my-drive">google drive</a>
+                </li>
+                <li>
+                    <a href="https://gmail">gmail</a>
+                </li>
+            </ul>
+
+            <ul>
+                # watching
+                <li>
+                    <a href="https://goku.sx/">goku</a>
+                </li>
+            </ul>
+                
+            
+        </div>
+    </main>
+    
+    <script>
+        var searching = document.getElementById("searchbar");
+        searching.addEventListener("keydown", function (e){
+            if(e.code === "Enter") {
+                search()
+            }
+        });
+
+        function search(){
+            var searchbar = document.getElementById("searchbar").value;
+
+            window.location.href = "https://www.google.com/search?q=" + searchbar + "";
+            
+        }
+    </script>
+    <script>
+        let time = document.getElementById("current-time");
+
+        setInterval(() =>{
+            let d = new Date();
+            time.innerHTML = d.toLocaleTimeString();
+        },1000)
+       
+    </script>
+
+</body>
+</html>
